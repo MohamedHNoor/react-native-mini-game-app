@@ -1,11 +1,14 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { ImageBackground, Text } from 'react-native';
+import StartGameScreen from './screens/StartGameScreen';
 
 export default function App() {
   return (
-    <View className='flex-1 items-center justify-center bg-blue-200'>
-      <Text className='text-red-500'>Hello world</Text>
-      <StatusBar style='auto' />
-    </View>
+    <ImageBackground
+      source={require('./assets/images/background.png')}
+      resizeMode='cover'
+      className='flex-1 opacity-100'
+    >
+      <StartGameScreen />
+    </ImageBackground>
   );
 }
